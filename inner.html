@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML</title>
+</head>
+    <body>
+    <div id="container">
+    <p>Ini paragraf pertama.</p>
+    </div>
+    <script>
+    // Mengambil konten HTML
+    let konten = document.getElementById("container").innerHTML;
+    console.log(konten); // Output: <p>Ini paragraf pertama.</p>
+    // Mengubah konten HTML
+    document.getElementById("container").innerHTML = "<p>Ini paragraf baru.</p>";
+    </script>
+    </body>
+</html>
