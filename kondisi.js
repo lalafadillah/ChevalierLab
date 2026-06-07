@@ -1,4 +1,4 @@
-    const umur = 12;
+    const umur = 21;
 
     // If Else Statement
     if(umur >= 17) {

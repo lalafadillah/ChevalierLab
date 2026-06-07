@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputText" placeholder="Ketik sesuatu..." />
+    <p id="outputText"></p>
+    <script>
+        document.getElementById("inputText").oninput = function() {
+        let teks = this.value;
+        document.getElementById("outputText").textContent = "Anda mengetik: " + teks;
+        };
+    </script>
+</body>
+</html>
