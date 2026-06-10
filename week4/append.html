@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="daftar">
+        <li>Item 1</li>
+    </ul>
+        <script>
+            // Menambahkan elemen baru
+            let itemBaru = document.createElement("li");
+            itemBaru.textContent = "Item 2";
+            document.getElementById("daftar").append(itemBaru);
+            // Menambahkan teks
+            document.getElementById("daftar").append(" (Item tambahan)");
+        </script>
+</body>
+</body>
+</html>
