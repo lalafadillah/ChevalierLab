@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="teks">Ini adalah contoh teks.</p>
+    <p id="text">Ini adalah contoh kalimat yang tidak di rubah</p>
+    <script>
+    // Mengambil teks
+    let teks = document.getElementById("teks").textContent;
+    console.log(teks); // Output: Ini adalah contoh teks.
+    // Mengubah teks
+    document.getElementById("teks").textContent = "Teks telah diubah!";
+    </script>
+</body>
+</html>
