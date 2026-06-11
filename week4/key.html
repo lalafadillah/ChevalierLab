@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputKeyboard" placeholder="Tekan tombol..." />
+    <p id="statusKeyboard"></p>
+    <script>
+    document.getElementById("inputKeyboard").onkeydown = function(event) {
+    document.getElementById("statusKeyboard").textContent = "Tombol ditekan: " + event.key;
+    };
+    document.getElementById("inputKeyboard").onkeyup = function(event) {
+    document.getElementById("statusKeyboard").textContent = "Tombol dilepas: " + event.key;
+    };
+</script>
+</body>
+</html>
