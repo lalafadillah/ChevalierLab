@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formulir">
+        <input type="text" name="nama" placeholder="Nama Anda" required />
+        <button type="submit">Kirim</button>
+    </form>
+    <p id="statusForm"></p>
+    <script>
+        document.getElementById("formulir").onsubmit = function(event) {
+            event.preventDefault(); // Mencegah pengiriman form
+            let nama = document.querySelector("input[name='nama']").value;
+            document.getElementById("statusForm").textContent = "Form dikirim oleh: " + nama;
+        };
+    </script>
+</body>
+</html>
