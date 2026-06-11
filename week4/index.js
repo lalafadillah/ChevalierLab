@@ -1,0 +1,1 @@
+console.log('YEAYYY AKU DITEKAN!')
