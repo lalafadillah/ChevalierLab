@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Kartu Profil Tailwind CSS</title>
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://jsdelivr.net"></script>
+</head>
+<body class="bg-slate-100 flex items-center justify-center min-h-screen">
+
+    <!-- Kartu Profil -->
+    <div class="bg-white max-w-sm mx-auto rounded-2xl shadow-lg overflow-hidden border border-slate-200 hover:shadow-xl transition-shadow duration-300">
+        <!-- Bagian Gambar Header -->
+        <div class="h-32 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+        
+        <!-- Bagian Informasi -->
+        <div class="text-center px-6 pb-8 pt-4">
+            <h2 class="text-xl font-bold text-slate-800">Lala Fadhilah</h2>
+            <p class="text-blue-500 font-medium text-sm mt-1">Software engineer</p>
+            <p class="text-slate-500 mt-4 text-sm leading-relaxed">
+                Gemar mempelajari hal baru di dunia teknologi. Fokus pada pembuatan antarmuka pengguna yang menarik dan responsif.
+            </p>
+
+            <!-- Tombol Aksi -->
+            <div class="mt-8 flex justify-center gap-4">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2.5 rounded-full shadow-sm transition-colors duration-200 cursor-pointer">
+                    Ikuti
+                </button>
+                <button class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-6 py-2.5 rounded-full shadow-sm border border-slate-200 transition-colors duration-200 cursor-pointer">
+                    Pesan
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
