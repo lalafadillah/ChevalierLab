@@ -1,114 +1,185 @@
-/* Include the padding and border in an element's total width and height */
 * {
   box-sizing: border-box;
 }
 
-/* Remove margins and padding from the list */
-ul {
+body {
   margin: 0;
+  min-height: 100vh;
+
+  background-color: #ffd6e7;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 950px;
+  margin: 30px auto;
+}
+
+.header {
+  background-color: #ff8fab;
+
+  padding: 30px;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  animation: float 3s ease-in-out infinite;
+}
+
+.header h1 {
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header p {
+  color: white;
+  margin-top: 8px;
+}
+
+.input-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+input {
+  flex: 1;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+.input-group button {
+  background: white;
+
+  color: #ff5c8a;
+
+  border: none;
+
+  padding: 15px 25px;
+
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.input-group button:hover {
+  transform: scale(1.08);
+}
+
+ul {
+  margin-top: 25px;
   padding: 0;
 }
 
-/* Style the list items */
-ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 12px 8px 12px 40px;
-  background: #eee;
-  font-size: 18px;
-  transition: 0.2s;
+li {
+  list-style: none;
 
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  background: white;
+
+  margin-bottom: 15px;
+
+  padding: 18px 20px;
+
+  border-radius: 18px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  animation: slideUp 0.4s ease;
 }
 
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
-  background: #f9f9f9;
+li span {
+  font-size: 17px;
+  font-weight: 500;
 }
 
-/* Darker background-color on hover */
-ul li:hover {
-  background: #ddd;
-}
-
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background: #888;
-  color: #fff;
-  text-decoration: line-through;
-}
-
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-/* Style the close button */
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: #f44336;
-  color: white;
-}
-
-/* Style the header */
-.header {
-  background-color: #f44336;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-}
-
-/* Clear floats after the header */
-.header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the input */
-input {
-  margin: 0;
+.done-btn {
   border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-}
 
-/* Style the "Add" button */
-.addBtn {
-  padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: #555;
-  float: left;
-  text-align: center;
-  font-size: 16px;
+  background: #caffbf;
+
+  padding: 10px 15px;
+
+  border-radius: 12px;
+
   cursor: pointer;
+
   transition: 0.3s;
-  border-radius: 0;
+
+  font-weight: bold;
 }
 
-.addBtn:hover {
-  background-color: #bbb;
+.done-btn:hover {
+  transform: scale(1.1);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive HP */
+
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group button {
+    width: 100%;
+  }
+
+  li {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .done-btn {
+    width: 100%;
+  }
 }
