@@ -1,132 +1,100 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-
-  background: #ffd6e7;
-
+  background-color: #ffd6e7;
   font-family: "Poppins", sans-serif;
+  min-height: 100vh;
 }
 
 .container {
-  width: 92%;
-  max-width: 1100px;
-
-  margin: 25px auto;
+  width: 95%;
+  max-width: 1200px;
+  margin: 20px auto;
 }
 
+/* =========================
+   HEADER
+========================= */
+
 .header {
-  background: #ff8fab;
+  background-color: #ff8fab;
+  color: white;
+  text-align: center;
 
   padding: 30px;
 
   border-radius: 25px;
 
-  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 
-  color: white;
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-
-  animation: float 3s infinite ease-in-out;
+  animation: float 3s ease-in-out infinite;
 }
 
 .header h1 {
-  margin: 0;
+  margin-bottom: 10px;
 }
 
-.input-group {
-  display: flex;
-  gap: 12px;
-
-  margin-top: 20px;
+.header p {
+  font-size: 1rem;
 }
 
-.input-group input {
-  flex: 1;
-
-  padding: 15px;
-
-  border: none;
-
-  border-radius: 15px;
-
-  font-size: 16px;
-}
-
-.input-group button {
-  border: none;
-
-  padding: 15px 25px;
-
-  border-radius: 15px;
-
-  cursor: pointer;
-
-  font-weight: bold;
-
-  background: white;
-
-  color: #ff5c8a;
-
-  transition: 0.3s;
-}
-
-.input-group button:hover {
-  transform: scale(1.08);
-}
+/* =========================
+   DASHBOARD
+========================= */
 
 .dashboard {
+  margin-top: 20px;
+
   display: grid;
 
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 15px;
-
-  margin-top: 25px;
+  gap: 20px;
 }
 
 .card {
   background: white;
 
-  padding: 20px;
-
   border-radius: 20px;
+
+  padding: 20px;
 
   text-align: center;
 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
-  animation: slideUp 0.5s ease;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card h3 {
   color: #ff5c8a;
+  margin-bottom: 10px;
 }
 
-.progress-title {
-  margin-top: 25px;
-
-  font-weight: bold;
-
-  color: #ff5c8a;
-}
+/* =========================
+   PROGRESS BAR
+========================= */
 
 .progress-container {
-  margin-top: 10px;
-
-  height: 25px;
+  margin-top: 20px;
 
   background: white;
 
-  border-radius: 20px;
+  height: 25px;
+
+  border-radius: 50px;
 
   overflow: hidden;
 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .progress-bar {
@@ -134,24 +102,92 @@ body {
 
   background: #ff8fab;
 
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
 
-ul {
+/* =========================
+   TODO SECTION
+========================= */
+
+.todo-section {
   margin-top: 25px;
-  padding: 0;
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 25px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.todo-section h2 {
+  color: #ff5c8a;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group input {
+  flex: 1;
+
+  padding: 15px;
+
+  border: 2px solid #ffc2d1;
+
+  border-radius: 15px;
+
+  outline: none;
+
+  font-size: 16px;
+}
+
+.input-group input:focus {
+  border-color: #ff8fab;
+}
+
+.input-group button {
+  background: #ff8fab;
+
+  color: white;
+
+  border: none;
+
+  padding: 15px 20px;
+
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.input-group button:hover {
+  background: #ff6f9d;
+  transform: scale(1.05);
+}
+
+/* =========================
+   TODO LIST
+========================= */
+
+ul {
+  margin-top: 20px;
 }
 
 li {
   list-style: none;
 
-  background: white;
+  background: #fff4f7;
 
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 
-  padding: 18px 20px;
+  padding: 15px;
 
-  border-radius: 18px;
+  border-radius: 15px;
 
   display: flex;
 
@@ -159,9 +195,11 @@ li {
 
   align-items: center;
 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-
   animation: slideUp 0.4s ease;
+}
+
+li span {
+  font-weight: 500;
 }
 
 .done-btn {
@@ -171,62 +209,125 @@ li {
 
   padding: 10px 15px;
 
-  border-radius: 12px;
+  border-radius: 10px;
 
   cursor: pointer;
-
-  font-weight: bold;
 
   transition: 0.3s;
 }
 
 .done-btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
-.game-box {
-  margin-top: 30px;
+/* =========================
+   GAME SECTION
+========================= */
+
+.game-section {
+  margin-top: 25px;
 
   background: white;
 
   padding: 25px;
 
-  border-radius: 20px;
+  border-radius: 25px;
 
   text-align: center;
 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.game-box input {
-  padding: 12px;
-
-  border-radius: 12px;
-
-  border: 1px solid #ddd;
-
-  width: 200px;
+.game-section h2 {
+  color: #ff5c8a;
+  margin-bottom: 10px;
 }
 
-.game-box button {
-  margin-left: 10px;
+.game-section p {
+  margin-bottom: 10px;
+}
 
-  padding: 12px 20px;
+.game-section h3 {
+  color: #ff5c8a;
+  margin-bottom: 15px;
+}
 
-  border: none;
+/* =========================
+   PACMAN BOARD
+========================= */
 
-  border-radius: 12px;
+.board {
+  width: fit-content;
+
+  margin: 20px auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(5, 70px);
+
+  gap: 6px;
+}
+
+.cell {
+  width: 70px;
+  height: 70px;
+
+  background: #fff4f7;
+
+  border-radius: 15px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 2rem;
+
+  transition: 0.2s;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   GAME OVER
+========================= */
+
+.game-over {
+  background: #ffe5ec;
+
+  padding: 20px;
+
+  border-radius: 20px;
+
+  margin-bottom: 15px;
+}
+
+.game-over button {
+  margin-top: 10px;
 
   background: #ff8fab;
 
   color: white;
 
+  border: none;
+
+  padding: 12px 20px;
+
+  border-radius: 12px;
+
   cursor: pointer;
 }
 
-.game-box button:hover {
-  transform: scale(1.05);
+.game-over button:hover {
+  background: #ff6f9d;
 }
+
+/* =========================
+   ANIMATION
+========================= */
 
 @keyframes float {
   0% {
@@ -254,22 +355,41 @@ li {
   }
 }
 
-@media(max-width:768px){
+/* =========================
+   RESPONSIVE
+========================= */
 
-  .dashboard{
-    grid-template-columns:1fr;
+@media (max-width: 768px) {
+
+  .dashboard {
+    grid-template-columns: 1fr;
   }
 
-  .input-group{
-    flex-direction:column;
+  .input-group {
+    flex-direction: column;
   }
 
-  li{
-    flex-direction:column;
-    gap:10px;
+  .input-group button {
+    width: 100%;
   }
 
-  .done-btn{
-    width:100%;
+  li {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .done-btn {
+    width: 100%;
+  }
+
+  .board {
+    grid-template-columns: repeat(5, 55px);
+  }
+
+  .cell {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
   }
 }
