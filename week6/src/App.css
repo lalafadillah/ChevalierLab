@@ -1,395 +1,402 @@
+/* --- CONFIGURASI UTAMA & IMPORT FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:wght@400;600;700&display=swap');
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  background-color: #ffd6e7;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Nunito', sans-serif;
+  background-color: #FFF0F5; /* Background utama Lavender Blush (Soft Pink Pastel) */
+  color: #4A4A4A;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.container {
-  width: 95%;
-  max-width: 1200px;
-  margin: 20px auto;
+/* --- LAYOUT UTAMA --- */
+.app-container {
+  width: 100%;
+  max-width: 650px;
 }
 
-/* =========================
-   HEADER
-========================= */
-
-.header {
-  background-color: #ff8fab;
-  color: white;
-  text-align: center;
-
-  padding: 30px;
-
-  border-radius: 25px;
-
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-
-  animation: float 3s ease-in-out infinite;
+/* --- SPESIFIKASI CARD (CONTAINER UTAMA) --- */
+.card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 35px;
+  box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
+  border: 4px solid #FFD1DC; /* Border pink pastel lembut */
+  position: relative;
+  overflow: hidden;
 }
 
-.header h1 {
-  margin-bottom: 10px;
+/* --- TYPOGRAPHY --- */
+h1, h2, h3 {
+  font-family: 'Fredoka', sans-serif;
+  color: #FF69B4; /* Hot pink pastel cerah */
+  margin-bottom: 15px;
 }
 
-.header p {
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.3rem; line-height: 1.5; }
+
+p {
+  color: #7D7D7D;
+  line-height: 1.6;
   font-size: 1rem;
 }
 
-/* =========================
-   DASHBOARD
-========================= */
-
-.dashboard {
-  margin-top: 20px;
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 20px;
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
 }
 
-.card {
-  background: white;
-
-  border-radius: 20px;
-
-  padding: 20px;
-
-  text-align: center;
-
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  color: #ff5c8a;
-  margin-bottom: 10px;
-}
-
-/* =========================
-   PROGRESS BAR
-========================= */
-
-.progress-container {
-  margin-top: 20px;
-
-  background: white;
-
-  height: 25px;
-
-  border-radius: 50px;
-
-  overflow: hidden;
-
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.progress-bar {
-  height: 100%;
-
-  background: #ff8fab;
-
-  transition: 0.5s ease;
-}
-
-/* =========================
-   TODO SECTION
-========================= */
-
-.todo-section {
-  margin-top: 25px;
-
-  background: white;
-
-  padding: 25px;
-
-  border-radius: 25px;
-
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.todo-section h2 {
-  color: #ff5c8a;
+.instruction {
+  font-size: 0.9rem;
   margin-bottom: 15px;
+  background: #FFF5F7;
+  padding: 10px 15px;
+  border-left: 4px solid #FFB6C1;
+  border-radius: 4px;
 }
 
-.input-group {
+/* --- DEKORASI IKON --- */
+.icon-header {
+  font-size: 4.5rem;
+  margin-bottom: 15px;
+  animation: bounce 2s infinite;
+}
+
+/* --- COMPONENT INPUT --- */
+textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 16px;
+  border: 2px solid #FFE4E1;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  outline: none;
+  resize: vertical;
+  transition: all 0.3s ease;
+  background-color: #FAFAFA;
+}
+
+textarea:focus {
+  border-color: #FFB6C1;
+  background-color: #FFF;
+  box-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
+}
+
+.code-area {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  background: #F9F0F2;
+  border-color: #E8D3D7;
+}
+
+/* --- KATEGORI TOMBOL (BUTTONS) --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-block { width: 100%; }
+
+.btn-primary {
+  background: linear-gradient(135deg, #FFB6C1 0%, #FF69B4 100%);
+  color: white;
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+}
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #BEE3F8 0%, #90CDF4 100%); /* Biru Pastel Pastel */
+  color: #2C5282;
+  box-shadow: 0 5px 15px rgba(144, 205, 244, 0.4);
+}
+.btn-secondary:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(144, 205, 244, 0.6);
+}
+
+.btn-outline {
+  background: #FFFFFF;
+  color: #A0AEC0;
+  border: 2px solid #E2E8F0;
+}
+.btn-outline:hover:not(:disabled) {
+  background: #F7FAFC;
+  color: #4A5568;
+}
+
+.btn-outline-block {
+  background: transparent;
+  color: #FF69B4;
+  border: 2px dashed #FFB6C1;
+  width: 100%;
+  margin-top: 10px;
+}
+.btn-outline-block:hover {
+  background: #FFF5F7;
+}
+
+.btn-finish {
+  background: linear-gradient(135deg, #C6F6D5 0%, #68D391 100%); /* Hijau pastel */
+  color: #22543D;
+  box-shadow: 0 5px 15px rgba(104, 211, 145, 0.4);
+}
+.btn-finish:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(104, 211, 145, 0.6);
+}
+
+.btn-sm {
+  background: #FFF0F5;
+  border: 1px dashed #FF69B4;
+  color: #FF69B4;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.btn-sm:hover { background: #FFE4E1; }
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* --- GROUP BUTTON MANAGEMENT --- */
+.welcome-buttons {
   display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+.action-buttons, .quiz-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
   gap: 10px;
 }
 
-.input-group input {
-  flex: 1;
-
-  padding: 15px;
-
-  border: 2px solid #ffc2d1;
-
-  border-radius: 15px;
-
-  outline: none;
-
-  font-size: 16px;
+/* --- PROGRESS BAR COMPONENT --- */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.badge-info {
+  background-color: #FFF0F5;
+  color: #FF69B4;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.progress-bar-container {
+  width: 100%;
+  height: 12px;
+  background-color: #EDF2F7;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #FFB6C1, #FF69B4);
+  border-radius: 10px;
+  transition: width 0.4s ease;
 }
 
-.input-group input:focus {
-  border-color: #ff8fab;
-}
-
-.input-group button {
-  background: #ff8fab;
-
-  color: white;
-
-  border: none;
-
-  padding: 15px 20px;
-
-  border-radius: 15px;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-}
-
-.input-group button:hover {
-  background: #ff6f9d;
-  transform: scale(1.05);
-}
-
-/* =========================
-   TODO LIST
-========================= */
-
-ul {
+/* --- PILIHAN JAWABAN (OPTIONS CARD) --- */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   margin-top: 20px;
 }
-
-li {
-  list-style: none;
-
-  background: #fff4f7;
-
-  margin-bottom: 12px;
-
-  padding: 15px;
-
-  border-radius: 15px;
-
+.option-card {
   display: flex;
-
-  justify-content: space-between;
-
   align-items: center;
-
-  animation: slideUp 0.4s ease;
-}
-
-li span {
-  font-weight: 500;
-}
-
-.done-btn {
-  border: none;
-
-  background: #caffbf;
-
-  padding: 10px 15px;
-
-  border-radius: 10px;
-
+  background: #FAFAFA;
+  border: 2px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 14px 20px;
+  text-align: left;
   cursor: pointer;
-
-  transition: 0.3s;
+  transition: all 0.2s ease;
+  width: 100%;
+  font-family: 'Nunito', sans-serif;
 }
-
-.done-btn:hover {
-  transform: scale(1.08);
+.option-card:hover {
+  background: #FFF5F7;
+  border-color: #FFB6C1;
+  transform: scale(1.01);
 }
-
-/* =========================
-   GAME SECTION
-========================= */
-
-.game-section {
-  margin-top: 25px;
-
-  background: white;
-
-  padding: 25px;
-
-  border-radius: 25px;
-
-  text-align: center;
-
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.option-card.selected {
+  background: #FFE4E1;
+  border-color: #FF69B4;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.15);
 }
-
-.game-section h2 {
-  color: #ff5c8a;
-  margin-bottom: 10px;
-}
-
-.game-section p {
-  margin-bottom: 10px;
-}
-
-.game-section h3 {
-  color: #ff5c8a;
-  margin-bottom: 15px;
-}
-
-/* =========================
-   PACMAN BOARD
-========================= */
-
-.board {
-  width: fit-content;
-
-  margin: 20px auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(5, 70px);
-
-  gap: 6px;
-}
-
-.cell {
-  width: 70px;
-  height: 70px;
-
-  background: #fff4f7;
-
-  border-radius: 15px;
-
+.option-letter {
+  background: #E2E8F0;
+  color: #4A5568;
+  width: 32px;
+  height: 32px;
   display: flex;
-
+  align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-right: 15px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+.option-card.selected .option-letter {
+  background: #FF69B4;
+  color: #FFFFFF;
+}
+.option-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4A4A4A;
+}
 
-  align-items: center;
-
+/* --- HALAMAN SKOR & BADGE --- */
+.badge-display {
   font-size: 2rem;
-
-  transition: 0.2s;
+  margin-bottom: 10px;
+}
+.score-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #FFF5F7;
+  border: 6px solid #FFB6C1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto;
+  box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3);
+}
+.score-num {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.2rem;
+  color: #FF69B4;
+  font-weight: bold;
+}
+.score-label {
+  font-size: 0.8rem;
+  color: #A0AEC0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.stats-table {
+  background: #FAFAFA;
+  border-radius: 16px;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  border-bottom: 1px solid #EDF2F7;
+}
+.stats-row:last-child { border-bottom: none; }
+.result-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.cell:hover {
-  transform: scale(1.05);
+/* --- HALAMAN REVIEW JAWABAN DETIL --- */
+.review-list {
+  max-height: 380px;
+  overflow-y: auto;
+  margin-top: 20px;
+  padding-right: 8px;
 }
-
-/* =========================
-   GAME OVER
-========================= */
-
-.game-over {
-  background: #ffe5ec;
-
-  padding: 20px;
-
-  border-radius: 20px;
-
+.review-item {
+  background: #FFF;
+  border-radius: 14px;
+  padding: 15px;
   margin-bottom: 15px;
+  text-align: left;
+}
+.correct-border { border: 2px solid #C6F6D5; background-color: #F0FFF4; }
+.wrong-border { border: 2px solid #FED7D7; background-color: #FFF5F5; }
+.review-item h4 {
+  font-size: 1rem;
+  color: #2D3748;
+  margin-bottom: 8px;
+}
+.review-details {
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 8px;
 }
 
-.game-over button {
-  margin-top: 10px;
+/* --- UTILITIES & ANIMATIONS --- */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-success { color: #38A169; }
+.text-danger { color: #E53E3E; }
+.bold { font-weight: bold; }
+.margin-top-md { margin-top: 20px; }
 
-  background: #ff8fab;
-
-  color: white;
-
-  border: none;
-
-  padding: 12px 20px;
-
-  border-radius: 12px;
-
-  cursor: pointer;
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
 }
 
-.game-over button:hover {
-  background: #ff6f9d;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* =========================
-   ANIMATION
-========================= */
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
+/* --- RESPONSIVE DESIGN (MEDIA QUERIES) --- */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+    border-radius: 18px;
   }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
-  .dashboard {
-    grid-template-columns: 1fr;
-  }
-
-  .input-group {
-    flex-direction: column;
-  }
-
-  .input-group button {
-    width: 100%;
-  }
-
-  li {
-    flex-direction: column;
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  .action-buttons, .quiz-navigation {
+    flex-direction: column-reverse;
     gap: 10px;
-    text-align: center;
   }
-
-  .done-btn {
-    width: 100%;
-  }
-
-  .board {
-    grid-template-columns: repeat(5, 55px);
-  }
-
-  .cell {
-    width: 55px;
-    height: 55px;
-    font-size: 1.5rem;
-  }
+  .btn { width: 100%; }
 }
