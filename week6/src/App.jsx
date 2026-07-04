@@ -1,13 +1,15 @@
 import "./App.css";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
 
-function App() {
-  return (
-    <div>
-      <h1>Hello Welcome !</h1>
-      <p>My name is Lala Fadhilah, Nice to meet you</p>
-      <p>Learn React with Chevalier Lab</p>
-    </div>
-  );
+function App(){
+    return(
+        <>
+            <Header/>
+            <h1>Hello, React!</h1>
+            <Footer/>
+        </>
+    );
 }
 
 export default App;
