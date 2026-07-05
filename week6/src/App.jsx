@@ -5,6 +5,7 @@ import Footer from "./components/Footer.jsx";
 function App(){
     return(
         <>
+            <Header nama="Chevalier Laboratory"/>
             <Header/>
             <h1>Hello, React!</h1>
             <Footer/>
