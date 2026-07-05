@@ -1,7 +1,7 @@
-function Header(){
+function Header(props){
     return(
         <header>
-            <h2>Chevalier Lab</h2>
+            <h2>{props.nama}</h2>
         </header>
     );
 }
