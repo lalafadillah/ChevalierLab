@@ -10,7 +10,7 @@ function App(){
             <Header/>
             <h1>Hello, React!</h1>
             <Footer/>
-            <Card nama="Lala" umur="19"/> //build many component
+            <Card nama="Lala" umur="19"/> 
             <Card nama="Budi" umur="20"/>
             <Card nama="Siti" umur="21"/>
         </>
