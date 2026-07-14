@@ -1,20 +1,28 @@
 import "./App.css";
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
-import Card from "./components/Card.jsx";
 
-function App(){
-    return(
-        <>
-            <Header nama="Chevalier Laboratory"/>
-            <Header/>
-            <h1>Hello, React!</h1>
-            <Footer/>
-            <Card nama="Lala" umur="19"/> 
-            <Card nama="Budi" umur="20"/>
-            <Card nama="Siti" umur="21"/>
-        </>
-    );
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
+import { Routes, Route } from "react-router-dom";
+
+function App() {
+  return (
+    <>
+      <Header />
+      <main className="container">
+        <Routes>
+          <Route path="/Home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
