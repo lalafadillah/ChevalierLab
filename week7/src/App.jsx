@@ -1,18 +1,13 @@
-import { Routes, Route } from "react-router-dom";
-import GlobalLayout from "./GlobalLayout";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import NotFound from "./pages/404";
+import UserCard from "./components/UserCard";
 
-export default function App() {
+function App() {
   return (
-    <Routes>
-      <Route element={<GlobalLayout />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-      </Route>
+    <div>
+      <h1>Belajar React</h1>
 
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+      <UserCard />
+    </div>
   );
 }
+
+export default App;
